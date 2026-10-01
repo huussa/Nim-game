@@ -178,10 +178,11 @@ def train(n):
     """
 
     player = NimAI()
+    player.q = dict()  # Reset Q-learning dictionary
 
     # Play n games
     for i in range(n):
-        print(f"Playing training game {i + 1}")
+        # print(f"Playing training game {i + 1}")
         game = Nim()
 
         # Keep track of last move made by either player
