@@ -13,7 +13,14 @@ def hard():
 
 def main():
     while True:
-        difficulty = input("Choose difficulty (easy, medium, hard): ").lower()
+        while True:
+            try: 
+                difficulty = input("Choose difficulty (easy, medium, hard): ").lower()
+                break
+            except ValueError:
+                print("\nInvalid input. Please enter integer numbers\n")
+                return
+        
         print("wait for a moment...")
         if difficulty == "easy":
             ai = easy()
